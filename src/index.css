@@ -1,13 +1,181 @@
-body {
+* {
+  box-sizing: border-box;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+*,
+*:before,
+*:after {
+  font-size: inherit;
+  font-weight: normal;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+img {
+  vertical-align: top;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+body {
+  background: #fff;
+  direction: ltr;
+  -webkit-text-size-adjust: none;
+}
+
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-weight: 400;
+  font-family: 'notokr', '맑은 고딕', Dotum, Gulim, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #000;
+}
+
+button {
+  font-weight: 400;
+  font-family: 'notokr', '맑은 고딕', Dotum, Gulim, Helvetica, sans-serif;
+  cursor: pointer;
+  border: 0 none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var,
+i {
+  font-weight: normal;
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table caption {
+  overflow: hidden;
+  font-size: medium;
+  line-height: normal;
+  width: 100%;
+  height: 0;
+  word-break: break-all;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)';
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  'Roboto',
+  'Oxygen',
+  'Ubuntu',
+  'Cantarell',
+  'Fira Sans',
+  'Droid Sans',
+  'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input,
+textarea,
+button,
+select {
+  border: none;
+  border-radius: 0;
 }
