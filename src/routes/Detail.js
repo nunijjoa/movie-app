@@ -28,8 +28,15 @@ const DetailUnitBlock = styled.div`
     position: relative;
     width: 100%;
     max-width: 1200px;
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+    }
     .thumb {
       width: 30%;
+      @media (max-width: 480px) {
+        width: 50%;
+        margin: 0 auto;
+      }
       img {
         width: 100%;
         box-shadow: 8px 8px 20px rgba(0,0,0, .3);
@@ -39,8 +46,17 @@ const DetailUnitBlock = styled.div`
     .txtInfo {
       width: calc(70% - 30px);
       margin-left: 30px;
+      @media (max-width: 480px) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+      }
       h1 {
         font-size: 35px;
+        word-break: keep-all;
+        @media (max-width: 480px) {
+          font-size: 23px;
+        }
       }
       ul {
         display: flex;
@@ -55,15 +71,27 @@ const DetailUnitBlock = styled.div`
         margin-top: 20px;
         font-size: 17px;
         line-height: 1.7em;
+        word-break: keep-all;
+        @media (max-width: 480px) {
+          display: box;
+          display: -webkit-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        }
       }
       a {
         display: inline-block;
         margin-top: 30px;
         padding: 0 30px;
-        box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+        box-shadow: 5px 5px 10px rgba(0,0,0,.3);
         border-radius: 5px;
-        background-color: rgba(255,255,255,.8);
-        color: ##000;
+        background-color: rgba(0,0,0,.7);
+        font-weight: bold;
+        color: #fff;
         font-size: 15px;
         line-height: 40px;
       }
@@ -106,6 +134,7 @@ const Detail = ({match, history}) => {
       setMovieDetail(movie);
     } catch (e) {
       console.error(500, e);
+      history.push("/");
     }
   };
   useEffect(() => {

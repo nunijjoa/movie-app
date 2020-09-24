@@ -12,6 +12,10 @@ const MovieBlock = styled.div`
   padding: 10px 20px 20px 190px;
   background-color: #fff;
   box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.25);
+  @media (max-width: 480px) {
+    height: auto;
+    padding-left: 40%;
+  }
   &:hover {
     .img {
       transform: translateY(-10px);
@@ -60,6 +64,10 @@ const MovieBlock = styled.div`
     width: 150px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.2s linear;
+    @media (max-width: 480px) {
+      top: -15px;
+      width: 30%;
+    }
     img {
       width: 100%;
       vertical-align: top;
